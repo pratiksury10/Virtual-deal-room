@@ -12,7 +12,7 @@ A real-time platform for secure business transactions between buyers and sellers
   
 ## 🛠 Technologies Used
 
-- **Frontend**: React, TailwindCSS, Axios, React Router
+- **Frontend**: React, Axios, React Router
 - **Backend**: Node.js, Express.js, MongoDB, JWT Authentication
 - **Real-Time Communication**: Socket.io
 - **Hosting**: Vercel (Frontend), Render (Backend)
