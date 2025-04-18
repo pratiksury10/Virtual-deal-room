@@ -5,10 +5,10 @@ A real-time platform for secure business transactions between buyers and sellers
 ## 🚀 Features
 
 - **Buyer Dashboard**: View your deals, create new ones, and join deal chats.
-- **Seller Dashboard**: View incoming deals, manage your deals, and negotiate.
+- **Seller Dashboard**: View incoming deals and negotiate.
 - **Real-Time Chat**: Integrated live chat between buyers and sellers.
 - **Document Upload**: Securely upload documents for each deal.
-- **Analytics**: Seller insights on deal statistics and analytics.
+- **Analytics**: Seller Dashboard insights
   
 ## 🛠 Technologies Used
 
