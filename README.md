@@ -28,6 +28,7 @@ A real-time platform for secure business transactions between buyers and sellers
 
 
 🌍 Deployment
+
 Frontend: Deployed on Vercel : https://virtual-deal-room-frontend.vercel.app/login
 
 Backend: Deployed on Render : https://virtual-deal-room-backend.onrender.com
