@@ -6,7 +6,7 @@ import PriceNegotiation from "./PriceNegotiation"; // Import PriceNegotiation co
 const DealRoom = ({ dealId, initialPrice }) => {
   const [price, setPrice] = useState(initialPrice || 0);
   const [messages, setMessages] = useState([]);
-  const socket = io("http://localhost:5008"); // Make sure the socket is connected to the correct server
+  const socket = io(`${process.env.REACT_APP_BASE_URL}`); // Make sure the socket is connected to the correct server
 
   // Listen for price updates from the server
   useEffect(() => {

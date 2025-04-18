@@ -9,7 +9,7 @@ const IncomingDeals = () => {
   useEffect(() => {
     const fetchDeals = async () => {
       try {
-        const res = await axios.get('http://localhost:5008/api/deals/incoming', {
+        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/deals/incoming`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }, // Add Bearer prefix to token
         });
         console.log(res.data); // Log the response to check the data format

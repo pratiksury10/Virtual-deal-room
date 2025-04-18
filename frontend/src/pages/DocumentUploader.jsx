@@ -13,7 +13,7 @@ const DocumentUploader = ({ dealId, token }) => {
     formData.append("allowedRoles", JSON.stringify(["buyer", "seller"]));
 
     try {
-      const res = await axios.post("http://localhost:5008/api/documents/upload", formData, {
+      const res = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/documents/upload`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           // "Content-Type" header is not needed, axios handles it automatically

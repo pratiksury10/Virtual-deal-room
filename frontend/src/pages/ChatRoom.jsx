@@ -9,7 +9,7 @@ const ChatRoom = () => {
   const { dealId } = useParams();  // 👈 Getting dealId from URL
   const [newMessage, setNewMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const socket = io("http://localhost:5008"); // ✅ Backend URL
+  const socket = io(`${process.env.REACT_APP_BASE_URL}`); // ✅ Backend URL
 
   useEffect(() => {
     if (!dealId ) return;

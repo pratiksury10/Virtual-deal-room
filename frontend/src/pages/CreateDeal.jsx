@@ -25,7 +25,7 @@ const CreateDeal = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:5008/api/deals/create',
+        `${process.env.REACT_APP_BASE_URL}/api/deals/create`,
         formData,
         {
           headers: {

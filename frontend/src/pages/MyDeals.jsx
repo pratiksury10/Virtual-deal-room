@@ -9,7 +9,7 @@ const MyDeals = () => {
     const fetchDeals = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5008/api/deals/my-deals', {
+        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/deals/my-deals`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

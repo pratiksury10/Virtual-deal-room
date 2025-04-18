@@ -6,7 +6,7 @@ const DocumentViewer = ({ dealId, token }) => {
 
   useEffect(() => {
     const fetchDocs = async () => {
-      const res = await axios.get(`http://localhost:5008/api/documents/${dealId}`, {
+      const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/documents/${dealId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -24,7 +24,7 @@ const DocumentViewer = ({ dealId, token }) => {
         <div key={doc._id} className="flex justify-between items-center mb-2">
           <span>{doc.fileName}</span>
           <a
-             href={`http://localhost:5008/api/documents/download/${doc.fileUrl}`}
+             href={`${process.env.REACT_APP_BASE_URL}/api/documents/download/${doc.fileUrl}`}
 
             // href={`http://localhost:5008/api/documents/download/${doc.fileUrl.split("/").pop()}`}
             // href={`http://localhost:5008/api/documents/download/${doc.fileUrl.split("/")[1]}`}

@@ -8,7 +8,7 @@ const AllDeals = () => {
   useEffect(() => {
     const fetchDeals = async () => {
       try {
-        const res = await axios.get("http://localhost:5008/api/deals/all", {
+        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/deals/all`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

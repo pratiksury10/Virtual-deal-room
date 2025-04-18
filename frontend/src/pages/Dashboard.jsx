@@ -23,7 +23,7 @@ const Dashboard = () => {
         let response;
 
         if (role === "buyer") {
-          response = await axios.get("http://localhost:5008/api/deals/my-deals", {
+          response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/deals/my-deals`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -31,7 +31,7 @@ const Dashboard = () => {
         }
 
         if (role === "seller") {
-          response = await axios.get("http://localhost:5008/api/deals/pending", {
+          response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/deals/pending`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },

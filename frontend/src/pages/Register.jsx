@@ -28,7 +28,7 @@ const Register = () => {
         return;
       }
 
-      await axios.post('http://localhost:5008/api/auth/register', formData);
+      await axios.post(`${process.env.REACT_APP_BASE_URL}/api/auth/register`, formData);
 
       alert('Registration successful! Please login now.');
       navigate('/login'); // 👈 Redirect to login after registration

@@ -9,7 +9,7 @@ const SellerDashboard = () => {
 
   const fetchDeals = async () => {
     try {
-      const res = await axios.get("http://localhost:5008/api/deals/pending", {
+      const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/deals/pending`, {
         headers: { Authorization: localStorage.getItem("token") },
       });
       setDeals(res.data);
@@ -20,7 +20,7 @@ const SellerDashboard = () => {
 
   const updateDealStatus = async (id, action) => {
     try {
-      const url = `http://localhost:5008/api/deals/${id}/${action}`; // accept or reject
+      const url = `${process.env.REACT_APP_BASE_URL}/api/deals/${id}/${action}`; // accept or reject
       await axios.patch(
         url,
         {},
